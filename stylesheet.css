@@ -11,6 +11,11 @@ h2 {
 h3 {
   color:#ed9fb0;
     font-family: "Courier New body copy" sans-serif;
+    margin-top: 25px;
+    margin-bottom: 75px;
+    margin-right: 50px;
+    margin-left: 100px;
+
 }
 
 body {
@@ -37,4 +42,8 @@ li a {
 
 .active{
   background-color: white;
+}
+
+a:hover{
+  background-color:#fafcff;
 }
