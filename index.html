@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <link rel="stylesheet" href="stylesheet.css">
+  
   <audio autoplay loop>
         <source src="kalimba.mp3">
   </audio>
-  <link rel="stylesheet" href="stylesheet.css">
+ 
+  
   <head>
     <title "My Life"> </title>
   </head>
@@ -24,27 +27,62 @@
     <img src="gif3.gif" alt="Loading" height="935" width="1665">
 
     <center>
-      <h1>Amanda Hoang || 黄雅丽 <button onclick="window.location.href='https://translate.google.com/?um=1&ie=UTF-8&hl=en&client=tw-ob#auto/en/%E9%BB%84%E9%9B%85%E4%B8%BD'">Click on me!</button>
+      <h1>Amanda Hoang || 黄雅丽 <button onclick="window.location.href='https://translate.google.com/?um=1&ie=UTF-8&hl=en&client=tw-ob#auto/en/%E9%BB%84%E9%9B%85%E4%B8%BD'">pronunciation!</button>
 
       <h2><p>Hello there!</p>
       <p>Welcome to my lovely website~</p>
       <p>Here, you will learn lots about me (:</p></h2>
+        
       <h3><p> I have two dogs! This one is Lady:</p>
         <img src="lady.jpg" alt="Lady" height="750" width="980">
       <p>And this one is Charlie!</p>
         <img src="charlie.jpg" alt="Charlie" height="750" width="980">
-      <p>I live in a family of 4, who often likes to travel the world!
+        
+      <p>I live in a family of 4, who often like to travel the world!
         We've been to China, Hong Kong, Cancun, Japan, and Thailand (for the most part)!</p>
       <p>Here are some pictures of Thailand!</p>
+        
       <p>Bangkok:</p>
         <img src="IMG_2571.jpg" alt-="Sky View" height="750" width:"980">
       <p><img src="IMG_2590.jpg" alt="Cart" height="750" width:"980"></p>
+
       <p>Krasom:</p>
         <img src="IMG_4746.jpg" alt="Mountain" height="750" width:"980">
       <p><img src="IMG_4776.jpg" alt="Water" height="750" width:"980"></p>
+        
       <p>Pattaya:</p>
       <img src="IMG_2706.jpg" alt="Beach" height="750" width:"980">
       <p><img src="IMG_2713.jpg" alt="Sky2" height="750" width"980"></p>
+       
+        <h3 class="w3-center">Here's a slideshow of other pictures I took:</h3>
+
+      <div class="w3-content w3-section" style="max-width:980px">
+        <img class="mySlides" src="IMG-2995.JPG" style="width:100%">
+        <img class="mySlides" src="IMG_2992.jpg" style="width:100%">
+        <img class="mySlides" src="IMG-2016.JPG" style="width:100%">
+        <img class="mySlides" src="IMG-4998.JPG" style="width:100%">
+        <img class="mySlides" src="IMG-5657.JPG" style="width:100%">
+      </div>
+
+      <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000);
+      }
+        </script>
+        
+        
+        
       <p>When I'm not traveling, I like going out and hanging out with my friends!
         I also enjoy playing video games, listening to music, and working out.
         I often spend my time at home, but more recently, I've been going out more
