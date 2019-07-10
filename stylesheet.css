@@ -1,0 +1,18 @@
+h1 {
+  color:#E7C3EE;
+    font-family: "Courier New Header"sans-serif;
+}
+
+h2 {
+  color:#8cb1e6;
+    font-family: "Courier New body copy" sans-serif;
+}
+
+h3 {
+  color:#ed9fb0;
+    font-family: "Courier New body copy" sans-serif;
+}
+
+body {
+  background-image: url("gif2.gif");
+}
