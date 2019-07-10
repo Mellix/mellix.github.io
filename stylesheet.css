@@ -16,3 +16,25 @@ h3 {
 body {
   background-image: url("gif2.gif");
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ebedf0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+  color: purple;
+}
+
+.active{
+  background-color: white;
+}
