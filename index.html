@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylesheet.css">
-  
+
   <audio autoplay loop>
-        <source src="y2mate.com - kiss_the_rain_kalimba_cover_Bgo_1OtePfQ.mp3" type="audio/mp3">
+        <source src="kalimba.mp3">
   </audio>
- 
-  
+  <style>
+  #map-canvas{
+    width: 500px;
+    height: 500px;
+  }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtZoc6xnFNlsmR2zXnD_-073rwj8OMnFY&libraries=places"
+         type="text/javascript">
+ </script>
+
+
   <head>
     <title "My Life"> </title>
   </head>
@@ -26,16 +36,16 @@
       <h2><p>Hello there!</p>
       <p>Welcome to my lovely website~</p>
       <p>Here, you will learn lots about me (:</p></h2>
-        
+
       <h3><p> I have two dogs! This one is Lady:</p>
         <img src="lady.jpg" alt="Lady" height="750" width="980" style="max-width:100%;height:auto;">
       <p>And this one is Charlie!</p>
         <img src="charlie.jpg" alt="Charlie" height="750" width="980" style="max-width:100%;height:auto;">
-        
+
       <p>I live in a family of 4, who often like to travel the world!
         We've been to China, Hong Kong, Cancun, Japan, and Thailand (for the most part)!</p>
       <p>Here are some pictures of Thailand!</p>
-        
+
       <p>Bangkok:</p>
         <img src="IMG_2571.jpg" alt-="Sky View" height="750" width:"980" style="max-width:100%;height:auto;">
       <p><img src="IMG_2590.jpg" alt="Cart" height="750" width:"980" style="max-width:100%;height:auto;"></p>
@@ -43,22 +53,60 @@
       <p>Krasom:</p>
         <img src="IMG_4746.jpg" alt="Mountain" height="750" width:"980" style="max-width:100%;height:auto;">
       <p><img src="IMG_4776.jpg" alt="Water" height="750" width:"980" style="max-width:100%;height:auto;"></p>
-        
+
       <p>Pattaya:</p>
       <img src="IMG_2706.jpg" alt="Beach" height="750" width:"980" style="max-width:100%;height:auto;">
       <p><img src="IMG_2713.jpg" alt="Sky2" height="750" width"980" style="max-width:100%;height:auto;"></p>
-        
+
       <p>When August comes, my family and I will be traveling to Phú Quốc, Vietnam!
         I'm very excited because I've never been there before. I will be taking relationshipsof pictures and posting
         them after I come back! </p>
 
-      <div id="map"></div>
-      <script src="https://maps.googleapis.com/maps/api/js?key=x&callback=initMap" async defer></script>
-       
-        <h3 class="w3-center">Here's a slideshow of other pictures I took:</h3>
+
+
+         <div id="map-canvas"></div>
+         <button id="get">Get Direction</button>
+
+         <script>
+           var directionsDisplay = new google.maps.DirectionsRender();
+           var directionsService = new google.maps.DirectionsService();
+
+           var map;
+
+           var california = new google.maps.LatLng(37.7749, 122.4194);
+           var phu quoc = new google.maps.LatLng(103.984020, 10.289879);
+
+           var mapOptions = {
+             zoom: 15,
+             center: california
+           };
+
+           map= new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+           directionsDisplay.setMap)map);
+
+           function calculateRoute(){
+             var request ={
+               origin: california,
+               destination: phu quoc,
+               travelMode: 'Flying'
+             };
+             directionsService.route(request, function(result, status){
+               if(status == "OK"){
+                 directionsDisplay.setDirections(result);
+           }
+             });
+
+           document.getElementById('get').onclick= function(){
+             calculateRoute();
+           };
+         }
+
+
+
+
+      <h3 class="w3-center">Here's a slideshow of other pictures I took:</h3>
 
       <div class="w3-content w3-section" style="max-width:980px">
-        <div class="w3-content w3-section" style="max-width:980px">
         <img class="mySlides" src="IMG-2995.JPG" style="width:100%">
         <img class="mySlides" src="IMG_2992.jpg" style="width:100%">
         <img class="mySlides" src="IMG-2016.JPG" style="width:100%">
@@ -86,9 +134,7 @@
       setTimeout(carousel, 2000);
       }
         </script>
-        
-        
-        
+
       <h3><p>When I'm not traveling, I like going out and hanging out with my friends!
         I also enjoy playing video games, listening to music, and working out.
         I often spend my time at home, but more recently, I've been going out more
@@ -99,7 +145,7 @@
         very nervous about it, but I can't wait to end the year with my friends!
         I value my relationships dearly and I hope I can maintain them throughout
         the year!</p>
-        <p> If you like to get to know me more, click on one of these social media:</p></h3>
+      <p> If you like to get to know me more, click on one of these social media:</p></h3>
       <button onclick="window.location.href='https://www.instagram.com/mysticii/?hl=en'">Instagram</button>
       <button onclick="window.location.href='https://www.snapchat.com/add/wumkin'">Snapchat</button>
       <button onclick="window.location.href='https://discord.gg/xNYk628'">Discord</button>
@@ -110,4 +156,3 @@
   </body>
 
 </html>
-        https://openlayers.org/en/latest/examples/flight-animation.html
