@@ -12,7 +12,7 @@
     height: 500px;
   }
   </style>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtZoc6xnFNlsmR2zXnD_-073rwj8OMnFY&libraries=places"
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtZoc6xnFNlsmR2zXnD_-073rwj8OMnFY&callback=initMap">
          type="text/javascript">
  </script>
 
@@ -58,53 +58,7 @@
       <img src="IMG_2706.jpg" alt="Beach" height="750" width:"980" style="max-width:100%;height:auto;">
       <p><img src="IMG_2713.jpg" alt="Sky2" height="750" width"980" style="max-width:100%;height:auto;"></p>
 
-      <p>When August comes, my family and I will be traveling to Phú Quốc, Vietnam!
-        I'm very excited because I've never been there before. I will be taking tons of pictures and posting
-        them after I come back! </p>
-
-
-
-         <div id="map-canvas"></div>
-         <button id="get">Get Direction</button>
-
-         <script>
-           var directionsDisplay = new google.maps.DirectionsRender();
-           var directionsService = new google.maps.DirectionsService();
-
-           var map;
-
-           var california = new google.maps.LatLng(37.7749, 122.4194);
-           var phu quoc = new google.maps.LatLng(103.984020, 10.289879);
-
-           var mapOptions = {
-             zoom: 15,
-             center: california
-           };
-
-           map= new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-           directionsDisplay.setMap)map);
-
-           function calculateRoute(){
-             var request ={
-               origin: california,
-               destination: phu quoc,
-               travelMode: 'Flying'
-             };
-             directionsService.route(request, function(result, status){
-               if(status == "OK"){
-                 directionsDisplay.setDirections(result);
-           }
-             });
-
-           document.getElementById('get').onclick= function(){
-             calculateRoute();
-           };
-         }
-
-
-
-
-      <h3 class="w3-center">Here's a slideshow of other pictures I took:</h3>
+      <h3 class="w3-center">Here is a slideshow of other pictures I took:</h3>
 
       <div class="w3-content w3-section" style="max-width:980px">
         <img class="mySlides" src="IMG-2995.JPG" style="width:100%">
@@ -133,7 +87,49 @@
       x[myIndex-1].style.display = "block";
       setTimeout(carousel, 2000);
       }
-        </script>
+      </script>
+
+      <h3><p>When August comes, my family and I will be traveling to Phú Quốc, Vietnam!
+        I'm very excited because I've never been there before. I will be taking tons of pictures and posting
+        them after I come back! </p><h/3>
+
+      <div id="map-canvas"></div>
+      <button id="get">Get Direction</button>
+
+      <script>
+        var directionsDisplay = new google.maps.DirectionsRender();
+        var directionsService = new google.maps.DirectionsService();
+
+        var map;
+
+        var california = new google.maps.LatLng(37.7749, 122.4194);
+        var phu quoc = new google.maps.LatLng(103.984020, 10.289879);
+
+        var mapOptions = {
+          zoom: 15,
+          center: california
+        };
+
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+        directionsDisplay.setMap)map);
+
+        function calculateRoute(){
+          var request ={
+            origin: california,
+            destination: phu quoc,
+            travelMode: 'Flying'
+          };
+          directionsService.route(request, function(result, status){
+            if(status == "OK"){
+              directionsDisplay.setDirections(result);
+        }
+          });
+
+        document.getElementById('get').onclick= function(){
+          calculateRoute();
+        };
+      }
+      </script>
 
       <h3><p>When I'm not traveling, I like going out and hanging out with my friends!
         I also enjoy playing video games, listening to music, and working out.
@@ -147,11 +143,10 @@
         the year!</p>
       <p> If you like to get to know me more, click on one of these social media:</p></h3>
       <center>
-        <button onclick="window.location.href='https://www.instagram.com/mysticii/?hl=en'">Instagram</button>
-        <button onclick="window.location.href='https://www.snapchat.com/add/wumkin'">Snapchat</button>
-        <button onclick="window.location.href='https://discord.gg/xNYk628'">Discord</button>
-        </center>
-
+      <button onclick="window.location.href='https://www.instagram.com/mysticii/?hl=en'">Instagram</button>
+      <button onclick="window.location.href='https://www.snapchat.com/add/wumkin'">Snapchat</button>
+      <button onclick="window.location.href='https://discord.gg/xNYk628'">Discord</button>
+      </center>
 
 
 
